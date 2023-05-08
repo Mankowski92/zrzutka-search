@@ -80,7 +80,7 @@ const ZrzutkasSearch: React.FC = () => {
       {!isLoading && !searchedZrzutkas.length && searchQuery && (
         <ZrzutkasInfo>No data to show</ZrzutkasInfo>
       )}
-      {!isData && !searchQuery && (
+      {!isData && !searchQuery && !isLoading && (
         <ZrzutkasInfo>Use the force Luke! Input i meant</ZrzutkasInfo>
       )}
     </Container>
