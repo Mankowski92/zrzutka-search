@@ -5,7 +5,7 @@ export const searchZrzutkas = (query: string, page = 1): Promise<Zrzutka[]> => {
   const url =
     CORS_DEALER +
     encodeURIComponent(
-      `${API_BASE_URL}/chips?term=${query}&page=${page}&limit=10`
+      `${API_BASE_URL}/chips?term=${query}&page=${page}&limit=12`
     );
 
   const headers = new Headers({

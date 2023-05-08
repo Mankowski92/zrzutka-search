@@ -8,6 +8,8 @@ export const Container = styled.article`
   flex-direction: column;
   justify-content: space-between;
   height: 15rem;
+  max-width: 300px;
+  margin: 0 auto;
 `;
 
 export const ZrzutkaImage = styled.img`
