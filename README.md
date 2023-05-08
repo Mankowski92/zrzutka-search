@@ -1,10 +1,26 @@
-# Teścik rekrutacyjny
+# Zrzutka Search App
 
-## Jak odpalić projekt
-Aby uruchomić projekt startowy, należy pobrać repozytorium, następnie zainstalować node modules'y komendą `make setup`, a na koniec uruchomić serwer node'a za pomocą `make start`. Używamy Makefile'a, żeby mieć pod ręką kluczowe komendy dla projektu. Aplikacja jest teraz dostępna pod adresem http://localhost:3000.
+This is a simple web application that allows users to search for zrzutka based on their title. The app displays a list
+of zrzutkas that match the search query, along with pagination to navigate between multiple pages of search results.
 
-## Co trzeba zrobić
-Celem zadania jest stworzenie prostej wyszukiwarki zrzutek. Wyszukiwarka musi zawierać pole tekstowe do wpisania szukanej frazy (`term`) oraz mieć możliwość doładowywania kolejnych wyników (`page`). Do wyszukiwania zrzutek należy wykorzystać endpoint https://zrzutka.pl/api/v2/chips (dokumentacja dostępna pod adresem: https://zrzutka.pl/api/v2/doc). Dane zwrócone z api należy zaprezentować w dowolnej formie, ale tak, aby każdy z wyników zawierał tytuł zrzutki (`subject.pl`), jej zdjęcie okładkowe (`coverUrl`) oraz zebraną kwotę (`balance`) wraz z walutą (`currency`). Dodatkowo po kliknięciu, w któryś wyników powinno nastąpić przekierowanie pod adres https://zrzutka.pl/{url}, gdzie `{url}` to wartość pola `url` zwróconego z Api. Przeglądarka będzie rzucać błędami przy strzelaniu requestów do innej domeny niż `localhost` dlatego trzeba zainstalować wtyczkę np. https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en albo https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino?hl=en i zezwolić na strzelanie pod adres `zrzutka.pl`.
+## How to run
 
-## Jak przesłać projekt
-Najlepiej zrobić swojego forka tego repozytorium i podesłać nam link.
+follow these steps:
+
+-Clone the repository using command git clone https://github.com/example-user/zrzutka-search.git
+-cd zrzutka-search
+-with npm install
+-npm start
+-By default app opens at http://localhost:3000.
+
+Usage
+To search for zrzutkas, simply type a search query into the search bar at the top of the page. The app will display a
+list of zrzutkas that match the search query, along with pagination links at the bottom of the page to navigate between
+multiple pages of search results.
+
+Technology Stack
+The app is built using React.js and is styled using the styled-components library. It uses the Zrzutka API to fetch
+zrzutka data.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
