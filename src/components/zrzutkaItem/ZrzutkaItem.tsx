@@ -15,7 +15,7 @@ type ZrzutkaItemProps = {
 
 export const ZrzutkaItem = ({ zrzutka }: ZrzutkaItemProps) => {
   const handleDirectToZrzutkaSite = useCallback(() => {
-    window.location.href = `https://zrzutka.pl/${zrzutka.url}`;
+    window.open(`https://zrzutka.pl/${zrzutka.url}`, '_blank');
   }, [zrzutka.url]);
 
   return (
